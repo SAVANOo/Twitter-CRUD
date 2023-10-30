@@ -1,0 +1,327 @@
+:root {
+    --background-main: #080a0a;
+    --background-hover: #080808;
+    --purple-main: #714ee7;
+    --purple-hover: #3c2b80;
+    --gray: #4d5155;
+    --gray-2: #16181c;
+    --gray-3: #71767b;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    background-color: var(--background-main);
+}
+
+.Twitter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavBar {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 25px;
+    height: 100%;
+    width: 40%;
+    gap: 15px;
+}
+
+.NavBar-List {
+    align-self: flex-start;
+}
+
+.NavBar-List-Item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: left;
+    padding: 7px;
+    width: auto;
+    text-decoration: none;
+    border-radius: 22px;
+    gap: 10px;
+}
+
+.NavBar-List-Item:hover {
+    background-color: var(--gray-2);
+}
+
+.NavBar-List-Item-Text {
+    font-weight: 600;
+    font-size: 24px;
+    justify-content: center;
+    text-align: center;
+}
+
+.NavBar-List-Item-Icon {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar-Button {
+    display: flex;
+    width: auto;
+    height: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 7px;
+}
+
+.NavBar-Button-Text {
+    color: white;
+    font-size: 22px;
+}
+
+.NavBar-Button-Icon {
+    width: auto;
+    height: 100%;
+}
+
+.NavBar-Profile {
+    margin-top: auto;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.NavBar-Profile:hover {
+    cursor: pointer;
+    background-color: var(--gray-2);
+}
+
+.NavBar-Profile-Image {
+    width: 35px;
+    height: 35px;
+}
+
+.NavBar-Profile-UserInfo-User {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.NavBar-Profile-UserInfo-UserName {
+    font-size: 15px;
+}
+
+.NavBar-Profile-Dots {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+}
+
+.Main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-inline: solid 1px var(--gray);
+}
+
+.Main>* {
+    border-bottom: solid 1px var(--gray);
+}
+
+.Main-NavigationTop {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Main>* {
+    padding: 12px;
+
+}
+
+.Main-NavigationTop-Text {
+    font-size: 18px;
+}
+
+
+.Main-BoxWriteTwite {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Main-BoxWriteTwite-BoxInput {
+    display: flex;
+    gap: 15px;
+    height: auto;
+}
+
+.Main-BoxWriteTwite-BoxInput-Input {
+    padding: 0 3px;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    resize: none;
+    height: auto;
+}
+
+.Main-BoxWriteTwite-BoxInput-Input:focus {
+    border: none;
+}
+
+.Main-BoxWriteTwite-BoxInput-Button {
+    margin-left: auto;
+    background-color: var(--purple-main);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 7px;
+    text-decoration: none;
+    border-radius: 15px;
+    border: none;
+}
+
+.Main-BoxWriteTwite-BoxInput-ProfilePicture {
+    width: 35px;
+    height: 35px;
+}
+
+.Main-Tweets {
+    width: 100%;
+    list-style: none;
+}
+
+.Main-Tweets-Tweet {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+}
+
+.Main-Tweets-Tweet-Content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo {
+    display: flex;
+    gap: 3px;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-UserName {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-UserName:hover, .Main-Tweets-Tweet-Content-UserInfo-Time:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-User,
+.Main-Tweets-Tweet-Content-UserInfo-Time {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--gray-3);
+}
+
+.Main-Tweets-Tweet-Content-Actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+}
+
+.Main-Tweets-Tweet-Content-Actions-Item {
+    padding: 7px;
+    border-radius: 50%;
+
+}
+
+.Main-Tweets-Tweet-Content-Actions :nth-child(1):hover {
+    background-color: rgba(25, 129, 198, 25%);
+    color: #1981c6;
+}
+
+.Main-Tweets-Tweet-Content-Actions :nth-child(2):hover {
+    background-color: rgba(0, 175, 117, 25%);
+    color: #00af75;
+}
+
+.Main-Tweets-Tweet-Content-Actions :nth-child(3):hover {
+    background-color: rgba(221, 22, 113, 25%);
+    color: #dd1671;
+}
+
+
+
+.Main-Tweets-Tweet-Content-Actions-Item {
+    text-decoration: none;
+    color: var(--gray-3);
+    display: flex;
+}
+
+.Main-Tweets-Tweet-Content-Actions-Item:hover {
+    text-decoration: underline;
+}
+
+.Main-Tweets-Tweet-UserPicture {
+    width: 35px;
+    height: 35px;
+}
+
+.Main-Tweets-Tweet-UserPicture:hover{
+    cursor: pointer;
+}
+
+.Main-Tweets-Tweet-Content-TextTweet {
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.NavBar-Button {
+    background-color: var(--purple-main);
+    border-radius: 20px;
+}
+
+
+.SideBarColum {
+    width: 50%;
+    height: auto;
+    padding: 12px 25px;
+}
+
+.SideBarColum-Box {
+    border-radius: 15px;
+    background-color: var(--gray-2);
+    padding: 10px 15px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.SideBarColum-Box-Title {
+    font-size: 22px;
+}
+
+.SideBarColum-Box-Description {
+    font-size: 15px;
+}
