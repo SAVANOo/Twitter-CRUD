@@ -81,7 +81,15 @@ body {
     align-items: center;
     text-decoration: none;
     gap: 7px;
+    background-color: var(--purple-main);
+    border-radius: 20px;
 }
+
+.NavBar-Button:hover {
+    cursor: pointer;
+    background-color: var(--purple-hover);
+}
+
 
 .NavBar-Button-Text {
     color: white;
@@ -111,6 +119,7 @@ body {
 .NavBar-Profile-Image {
     width: 35px;
     height: 35px;
+    border-radius: 50%;
 }
 
 .NavBar-Profile-UserInfo-User {
@@ -136,19 +145,13 @@ body {
     border-inline: solid 1px var(--gray);
 }
 
-.Main>* {
-    border-bottom: solid 1px var(--gray);
-}
 
 .Main-NavigationTop {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.Main>* {
+    border-bottom: solid 1px var(--gray);
     padding: 12px;
-
 }
 
 .Main-NavigationTop-Text {
@@ -161,6 +164,8 @@ body {
     align-items: left;
     flex-direction: column;
     gap: 15px;
+    border-bottom: solid 1px var(--gray);
+    padding: 12px;
 }
 
 .Main-BoxWriteTwite-BoxInput {
@@ -194,16 +199,29 @@ body {
     text-decoration: none;
     border-radius: 15px;
     border: none;
+    transition: 0.2s;
+}
+
+.Main-BoxWriteTwite-BoxInput-Button:hover {
+    cursor: pointer;
+    background-color: var(--purple-hover);
 }
 
 .Main-BoxWriteTwite-BoxInput-ProfilePicture {
     width: 35px;
     height: 35px;
+    border-radius: 50%;
 }
 
 .Main-Tweets {
     width: 100%;
     list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Main-Tweets>* {
+    border-bottom: solid 1px var(--gray);
 }
 
 .Main-Tweets-Tweet {
@@ -211,6 +229,8 @@ body {
     width: 100%;
     height: auto;
     gap: 10px;
+    padding: 12px;
+
 }
 
 .Main-Tweets-Tweet-Content {
@@ -222,7 +242,9 @@ body {
 
 .Main-Tweets-Tweet-Content-UserInfo {
     display: flex;
+    justify-content: left;
     gap: 3px;
+    width: 100%;
 }
 
 .Main-Tweets-Tweet-Content-UserInfo-UserName {
@@ -230,16 +252,50 @@ body {
     font-weight: 700;
 }
 
-.Main-Tweets-Tweet-Content-UserInfo-UserName:hover, .Main-Tweets-Tweet-Content-UserInfo-Time:hover{
+.Main-Tweets-Tweet-Content-UserInfo-UserName:hover,
+.Main-Tweets-Tweet-Content-UserInfo-Time:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
 
 .Main-Tweets-Tweet-Content-UserInfo-User,
 .Main-Tweets-Tweet-Content-UserInfo-Time {
     font-size: 15px;
     font-weight: 400;
     color: var(--gray-3);
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-Right {
+    display: flex;
+    margin-left: auto;
+    gap: 7px;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-Right-Edit,
+.Main-Tweets-Tweet-Content-UserInfo-Right-Delete {
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: transparent;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-Right-Edit:hover,
+.Main-Tweets-Tweet-Content-UserInfo-Right-Delete:hover {
+    cursor: pointer;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-Right-Edit:hover {
+    background-color: rgba(128, 128, 128, 25%);
+    color: gray;
+}
+
+.Main-Tweets-Tweet-Content-UserInfo-Right-Delete:hover {
+    background-color: rgba(255, 0, 0, 0.25);
+    color: red;
 }
 
 .Main-Tweets-Tweet-Content-Actions {
@@ -286,9 +342,10 @@ body {
 .Main-Tweets-Tweet-UserPicture {
     width: 35px;
     height: 35px;
+    border-radius: 50%;
 }
 
-.Main-Tweets-Tweet-UserPicture:hover{
+.Main-Tweets-Tweet-UserPicture:hover {
     cursor: pointer;
 }
 
@@ -297,12 +354,6 @@ body {
     color: var(--white);
     font-weight: 400;
 }
-
-.NavBar-Button {
-    background-color: var(--purple-main);
-    border-radius: 20px;
-}
-
 
 .SideBarColum {
     width: 50%;
@@ -324,4 +375,55 @@ body {
 
 .SideBarColum-Box-Description {
     font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+
+    .NavBar-Profile-UserInfo,
+    .SideBarColum,
+    .NavBar-Button-Text,
+    .NavBar-List-Item-Text,
+    .NavBar-Profile-Dots {
+        display: none;
+    }
+
+    .NavBar {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .NavBar-Button {
+        padding: 15px;
+    }
+
+    .NavBar-List {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .NavBar-List-Item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .NavBar {
+        display: none;
+    }
+
+    .SideBarColum {
+        display: none;
+    }
+
 }

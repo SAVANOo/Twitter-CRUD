@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/10c2a015e5.js" crossorigin="anonymous"></script>
+    <script src="Script.js" defer></script>
     <title>Twitter</title>
 </head>
 
@@ -62,8 +63,8 @@
             <div class="NavBar-Profile">
                 <img class="NavBar-Profile-Image" src="Src/Default_pfp.png" alt="ProfilePic">
                 <div class="NavBar-Profile-UserInfo">
-                    <h1 class="NavBar-Profile-UserInfo-UserName">Savano</h1>
-                    <h2 class="NavBar-Profile-UserInfo-User">@yourtrip</h2>
+                    <h1 class="NavBar-Profile-UserInfo-UserName">Elon Musk</h1>
+                    <h2 class="NavBar-Profile-UserInfo-User">@elonmusk</h2>
                 </div>
                 <h3 class="NavBar-Profile-Dots">...</h3>
             </div>
@@ -78,33 +79,41 @@
                     <img class="Main-BoxWriteTwite-BoxInput-ProfilePicture" src="Src/Default_pfp.png"
                         alt="ProfilePicture">
                     <textarea placeholder="O que está acontecendo?" rows="4" class="Main-BoxWriteTwite-BoxInput-Input"
-                        type="text"></textarea>
+                        type="text" id="Main-BoxWriteTwite-BoxInput-Input"></textarea>
                 </div>
-                <button class="Main-BoxWriteTwite-BoxInput-Button">Tweetar</button>
+                <button class="Main-BoxWriteTwite-BoxInput-Button"
+                    onclick="CreateTwite(Usuarios.ElonMusk)">Tweetar</button>
             </div>
+            <ul class="Main-Tweets" id="Main-Tweets">
 
-            <div class="Main-Tweets-Tweet">
-                <img class="Main-Tweets-Tweet-UserPicture" src="Src/Default_pfp.png" alt="ProfilePicture">
+                <li class="Main-Tweets-Tweet" id="0">
+                    <img class="Main-Tweets-Tweet-UserPicture" src="Src/Default_pfp.png" alt="ProfilePicture">
 
-                <div class="Main-Tweets-Tweet-Content">
-                    <div class="Main-Tweets-Tweet-Content-UserInfo">
-                        <h1 class="Main-Tweets-Tweet-Content-UserInfo-UserName">Savano</h1>
-                        <h1 class="Main-Tweets-Tweet-Content-UserInfo-User">@yourtrip</h1>
-                        <h1 class="Main-Tweets-Tweet-Content-UserInfo-Time">· 11h</h1>
+                    <div class="Main-Tweets-Tweet-Content">
+                        <div class="Main-Tweets-Tweet-Content-UserInfo">
+                            <h1 class="Main-Tweets-Tweet-Content-UserInfo-UserName">Savano</h1>
+                            <h1 class="Main-Tweets-Tweet-Content-UserInfo-User">@yourtrip</h1>
+                            <h1 class="Main-Tweets-Tweet-Content-UserInfo-Time">· 11h</h1>
+                            <div class="Main-Tweets-Tweet-Content-UserInfo-Right">
+                                <button
+                                    class="Main-Tweets-Tweet-Content-UserInfo-Right-Edit fa-regular fa-pen-to-square"></button>
+                                <button class="Main-Tweets-Tweet-Content-UserInfo-Right-Delete fa-solid fa-trash"
+                                    onclick="deleteTwite(2)"></button>
+                            </div>
+                        </div>
+
+                        <h1 class="Main-Tweets-Tweet-Content-TextTweet">Hello World!!!</h1>
+
+                        <div class="Main-Tweets-Tweet-Content-Actions">
+                            <a class="Main-Tweets-Tweet-Content-Actions-Item fa-regular fa-comment" href="#"> 1</a>
+                            <a class="Main-Tweets-Tweet-Content-Actions-Item fa-solid fa-retweet" href="#"> 2</a>
+                            <a class="Main-Tweets-Tweet-Content-Actions-Item fa-regular fa-heart" href="#"> 356</a>
+                        </div>
                     </div>
-
-                    <h1 class="Main-Tweets-Tweet-Content-TextTweet">Hello World!!!</h1>
-
-                    <div class="Main-Tweets-Tweet-Content-Actions">
-                        <a class="Main-Tweets-Tweet-Content-Actions-Item fa-regular fa-comment" href="#"> 1</a>
-                        <a class="Main-Tweets-Tweet-Content-Actions-Item fa-solid fa-retweet" href="#"> 2</a>
-                        <a class="Main-Tweets-Tweet-Content-Actions-Item fa-regular fa-heart" href="#"> 356</a>
-                    </div>
-                </div>
-            </div>
+                </li>
 
 
-
+            </ul>
 
         </section>
 
