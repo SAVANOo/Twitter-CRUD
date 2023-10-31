@@ -2,12 +2,12 @@ const Usuarios = {
     Savio: {
         UserName: "Savio Mendes",
         User: "@sávio_mendes",
-        ProfilePicture: "src/Sávio Mendes.jpeg"
+        ProfilePicture: "Src/Savio_Mendes.jpeg"
     },
     ElonMusk: {
         UserName: "Elon Musk",
         User: "@elonmusk",
-        ProfilePicture: "src/Default_pfp.png"
+        ProfilePicture: "Src/Default_pfp.png"
     }
 }
 
