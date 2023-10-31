@@ -15,7 +15,7 @@ let Tweets = [
     {
         Id: 0,
         User: Usuarios.Savio,
-        Tweet: "Hello World!!!"
+        Tweet: "Hello World!!! Sejam bem vindos ao meu projeto pessoal Twitter CRUD, projeto esse que tem o intuito de fortalecer meus conhecimentos em HTML, CSS e JavaScript."
     }
 
 ]
